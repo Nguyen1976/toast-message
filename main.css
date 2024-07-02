@@ -1,0 +1,143 @@
+#toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+} 
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    min-width: 400px;
+    max-width: 450px;
+    transition: all linear 0.3s;
+    /* animation: slideInleft ease 0.3s, fadeOut linear 1s 3s forwards;forwards là dùng tại điểm kết thúc của keyframe */
+}
+
+@keyframes slideInleft {
+    from {
+        opacity: 0;
+        transform: translateX(450px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast {
+    margin: 24px;
+}
+
+.toast__icon,.toast__close {
+    font-size: 24px;
+
+}
+
+.toast__body {
+    flex-grow: content;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-inline-start: auto;
+    margin-right: 10px;
+}
+
+.toast__icon {
+    margin: 0 10px;
+}
+
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast--success .toast__icon {
+    color: #47d864;
+}
+
+.toast--info {
+    border-color: #2f86eb;
+}
+
+.toast--info .toast__icon {
+    color: #2f86eb;
+}
+
+.toast--warning {
+    border-color: #ffc021;
+}
+
+.toast--warning .toast__icon {
+    color: #ffc021;
+}
+
+.toast--error {
+    border-color: red;
+}
+
+.toast--error .toast__icon {
+    color: red;
+}
+
+#toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+.show {
+    display: flex;
+    justify-content: center;
+    transform: translateY(50vh);
+    transform: 0.3s;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #47d864;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition-delay: 0.1s;
+}
